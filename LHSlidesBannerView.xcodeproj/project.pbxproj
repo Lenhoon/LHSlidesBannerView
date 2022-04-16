@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02DD8996C76FB8B3935A1F97 /* Pods_LHSlidesBannerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A519B23894C8CCCBF8131D8 /* Pods_LHSlidesBannerView.framework */; };
+		8373458E280AD30F0060D52D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8373458D280AD30F0060D52D /* AppDelegate.m */; };
+		83734591280AD30F0060D52D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83734590280AD30F0060D52D /* SceneDelegate.m */; };
+		83734594280AD30F0060D52D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83734593280AD30F0060D52D /* ViewController.m */; };
+		83734597280AD30F0060D52D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83734595280AD30F0060D52D /* Main.storyboard */; };
+		83734599280AD3110060D52D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83734598280AD3110060D52D /* Assets.xcassets */; };
+		8373459C280AD3110060D52D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8373459A280AD3110060D52D /* LaunchScreen.storyboard */; };
+		8373459F280AD3110060D52D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8373459E280AD3110060D52D /* main.m */; };
+		837345AD280AD5070060D52D /* LHSlidesBannerItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 837345A7280AD5060060D52D /* LHSlidesBannerItemView.m */; };
+		837345AE280AD5070060D52D /* LHSlidesBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 837345A9280AD5060060D52D /* LHSlidesBannerView.m */; };
+		837345AF280AD5070060D52D /* LHSlidesBannerIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 837345AA280AD5060060D52D /* LHSlidesBannerIndicatorView.m */; };
+		837345BC280B172C0060D52D /* NSString+LHSlidesBannerViewExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 837345BB280B172C0060D52D /* NSString+LHSlidesBannerViewExtend.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		393074AA2EEC305CBA95A5B0 /* Pods-LHSlidesBannerView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LHSlidesBannerView.debug.xcconfig"; path = "Target Support Files/Pods-LHSlidesBannerView/Pods-LHSlidesBannerView.debug.xcconfig"; sourceTree = "<group>"; };
+		4A519B23894C8CCCBF8131D8 /* Pods_LHSlidesBannerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LHSlidesBannerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83734589280AD30F0060D52D /* LHSlidesBannerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LHSlidesBannerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8373458C280AD30F0060D52D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8373458D280AD30F0060D52D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8373458F280AD30F0060D52D /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		83734590280AD30F0060D52D /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		83734592280AD30F0060D52D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		83734593280AD30F0060D52D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		83734596280AD30F0060D52D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		83734598280AD3110060D52D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8373459B280AD3110060D52D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8373459D280AD3110060D52D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8373459E280AD3110060D52D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		837345A6280AD5060060D52D /* LHSlidesBannerIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSlidesBannerIndicatorView.h; sourceTree = "<group>"; };
+		837345A7280AD5060060D52D /* LHSlidesBannerItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHSlidesBannerItemView.m; sourceTree = "<group>"; };
+		837345A8280AD5060060D52D /* LHSlidesBannerIndicatorViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSlidesBannerIndicatorViewProtocol.h; sourceTree = "<group>"; };
+		837345A9280AD5060060D52D /* LHSlidesBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHSlidesBannerView.m; sourceTree = "<group>"; };
+		837345AA280AD5060060D52D /* LHSlidesBannerIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHSlidesBannerIndicatorView.m; sourceTree = "<group>"; };
+		837345AB280AD5060060D52D /* LHSlidesBannerItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSlidesBannerItemView.h; sourceTree = "<group>"; };
+		837345AC280AD5070060D52D /* LHSlidesBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSlidesBannerView.h; sourceTree = "<group>"; };
+		837345BA280B172C0060D52D /* NSString+LHSlidesBannerViewExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+LHSlidesBannerViewExtend.h"; sourceTree = "<group>"; };
+		837345BB280B172C0060D52D /* NSString+LHSlidesBannerViewExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+LHSlidesBannerViewExtend.m"; sourceTree = "<group>"; };
+		FB23EB9BE65B22667A84A17B /* Pods-LHSlidesBannerView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LHSlidesBannerView.release.xcconfig"; path = "Target Support Files/Pods-LHSlidesBannerView/Pods-LHSlidesBannerView.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83734586280AD30F0060D52D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02DD8996C76FB8B3935A1F97 /* Pods_LHSlidesBannerView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		383923AF07B0CA3A05365CC6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				393074AA2EEC305CBA95A5B0 /* Pods-LHSlidesBannerView.debug.xcconfig */,
+				FB23EB9BE65B22667A84A17B /* Pods-LHSlidesBannerView.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		68C45BC11D1F0167FD775765 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A519B23894C8CCCBF8131D8 /* Pods_LHSlidesBannerView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83734580280AD30F0060D52D = {
+			isa = PBXGroup;
+			children = (
+				8373458B280AD30F0060D52D /* LHSlidesBannerView */,
+				8373458A280AD30F0060D52D /* Products */,
+				383923AF07B0CA3A05365CC6 /* Pods */,
+				68C45BC11D1F0167FD775765 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8373458A280AD30F0060D52D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83734589280AD30F0060D52D /* LHSlidesBannerView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8373458B280AD30F0060D52D /* LHSlidesBannerView */ = {
+			isa = PBXGroup;
+			children = (
+				837345B9280B17160060D52D /* Category */,
+				837345A5280AD4F50060D52D /* LHSlidesBannerView */,
+				8373458C280AD30F0060D52D /* AppDelegate.h */,
+				8373458D280AD30F0060D52D /* AppDelegate.m */,
+				8373458F280AD30F0060D52D /* SceneDelegate.h */,
+				83734590280AD30F0060D52D /* SceneDelegate.m */,
+				83734592280AD30F0060D52D /* ViewController.h */,
+				83734593280AD30F0060D52D /* ViewController.m */,
+				83734595280AD30F0060D52D /* Main.storyboard */,
+				83734598280AD3110060D52D /* Assets.xcassets */,
+				8373459A280AD3110060D52D /* LaunchScreen.storyboard */,
+				8373459D280AD3110060D52D /* Info.plist */,
+				8373459E280AD3110060D52D /* main.m */,
+			);
+			path = LHSlidesBannerView;
+			sourceTree = "<group>";
+		};
+		837345A5280AD4F50060D52D /* LHSlidesBannerView */ = {
+			isa = PBXGroup;
+			children = (
+				837345AC280AD5070060D52D /* LHSlidesBannerView.h */,
+				837345A9280AD5060060D52D /* LHSlidesBannerView.m */,
+				837345A6280AD5060060D52D /* LHSlidesBannerIndicatorView.h */,
+				837345AA280AD5060060D52D /* LHSlidesBannerIndicatorView.m */,
+				837345A8280AD5060060D52D /* LHSlidesBannerIndicatorViewProtocol.h */,
+				837345AB280AD5060060D52D /* LHSlidesBannerItemView.h */,
+				837345A7280AD5060060D52D /* LHSlidesBannerItemView.m */,
+			);
+			path = LHSlidesBannerView;
+			sourceTree = "<group>";
+		};
+		837345B9280B17160060D52D /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				837345BA280B172C0060D52D /* NSString+LHSlidesBannerViewExtend.h */,
+				837345BB280B172C0060D52D /* NSString+LHSlidesBannerViewExtend.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83734588280AD30F0060D52D /* LHSlidesBannerView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 837345A2280AD3110060D52D /* Build configuration list for PBXNativeTarget "LHSlidesBannerView" */;
+			buildPhases = (
+				46EF7808B9253DDE6D61BD30 /* [CP] Check Pods Manifest.lock */,
+				83734585280AD30F0060D52D /* Sources */,
+				83734586280AD30F0060D52D /* Frameworks */,
+				83734587280AD30F0060D52D /* Resources */,
+				433E81463F131430C706AECE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LHSlidesBannerView;
+			productName = LHSlidesBannerView;
+			productReference = 83734589280AD30F0060D52D /* LHSlidesBannerView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83734581280AD30F0060D52D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					83734588280AD30F0060D52D = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 83734584280AD30F0060D52D /* Build configuration list for PBXProject "LHSlidesBannerView" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83734580280AD30F0060D52D;
+			productRefGroup = 8373458A280AD30F0060D52D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83734588280AD30F0060D52D /* LHSlidesBannerView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83734587280AD30F0060D52D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8373459C280AD3110060D52D /* LaunchScreen.storyboard in Resources */,
+				83734599280AD3110060D52D /* Assets.xcassets in Resources */,
+				83734597280AD30F0060D52D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		433E81463F131430C706AECE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LHSlidesBannerView/Pods-LHSlidesBannerView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LHSlidesBannerView/Pods-LHSlidesBannerView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LHSlidesBannerView/Pods-LHSlidesBannerView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46EF7808B9253DDE6D61BD30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LHSlidesBannerView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83734585280AD30F0060D52D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83734594280AD30F0060D52D /* ViewController.m in Sources */,
+				8373458E280AD30F0060D52D /* AppDelegate.m in Sources */,
+				837345BC280B172C0060D52D /* NSString+LHSlidesBannerViewExtend.m in Sources */,
+				8373459F280AD3110060D52D /* main.m in Sources */,
+				83734591280AD30F0060D52D /* SceneDelegate.m in Sources */,
+				837345AD280AD5070060D52D /* LHSlidesBannerItemView.m in Sources */,
+				837345AF280AD5070060D52D /* LHSlidesBannerIndicatorView.m in Sources */,
+				837345AE280AD5070060D52D /* LHSlidesBannerView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		83734595280AD30F0060D52D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83734596280AD30F0060D52D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8373459A280AD3110060D52D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8373459B280AD3110060D52D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		837345A0280AD3110060D52D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		837345A1280AD3110060D52D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		837345A3280AD3110060D52D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 393074AA2EEC305CBA95A5B0 /* Pods-LHSlidesBannerView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5LPEN5WG3X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LHSlidesBannerView/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Lenhoon.LHSlidesBannerView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		837345A4280AD3110060D52D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB23EB9BE65B22667A84A17B /* Pods-LHSlidesBannerView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5LPEN5WG3X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LHSlidesBannerView/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Lenhoon.LHSlidesBannerView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83734584280AD30F0060D52D /* Build configuration list for PBXProject "LHSlidesBannerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				837345A0280AD3110060D52D /* Debug */,
+				837345A1280AD3110060D52D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		837345A2280AD3110060D52D /* Build configuration list for PBXNativeTarget "LHSlidesBannerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				837345A3280AD3110060D52D /* Debug */,
+				837345A4280AD3110060D52D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83734581280AD30F0060D52D /* Project object */;
+}
