@@ -23,6 +23,7 @@ static NSString * const kLHSlidesBannerViewItemReuseIdentifier = @"LHSlidesBanne
 @property (nonatomic, assign) NSInteger itemsCount; /**< 实际CollectionView 数量 */
 @property (nonatomic, assign) NSUInteger currentIndex; /**< 当前实际Index */
 @property (nonatomic, strong, nullable) UIView<LHSlidesBannerIndicatorViewProtocol> *indicatorView; /**< 指示器 */
+
 @end
 
 @implementation LHSlidesBannerView
@@ -97,10 +98,10 @@ static NSString * const kLHSlidesBannerViewItemReuseIdentifier = @"LHSlidesBanne
 
 /// 配置CollectionView数据源
 - (void)configCollectionViewDataSource {
-    self.dataSourceCount = [self.dataSource cycleRollViewRollingItems].count;
+    self.dataSourceCount = [[self.dataSource itemsInSlidesBannerView: self] count];
     if (self.delegate
-        && [self.delegate respondsToSelector:@selector(supportInfiniteLoop)]
-        && [self.delegate supportInfiniteLoop]) {
+        && [self.delegate respondsToSelector:@selector(supportInfiniteLoopInSlidesBannerView:)]
+        && [self.delegate supportInfiniteLoopInSlidesBannerView: self]) {
         // 支持无限轮播
         self.itemsCount = self.dataSourceCount * kLHSlidesBannerViewMaximumCoefficient;
         self.currentIndex = self.dataSourceCount * (kLHSlidesBannerViewMaximumCoefficient/2);
@@ -184,14 +185,21 @@ static NSString * const kLHSlidesBannerViewItemReuseIdentifier = @"LHSlidesBanne
     [self scrollToItemIndexOf:index];
     
     [self.collectionView reloadData];
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(supportAutoScrollInSlidesBannerView:)]) {
+        if (![self.delegate supportAutoScrollInSlidesBannerView: self]) {
+            // 不支持自动滚动 - return
+            return;
+        }
+    }
 }
 
 /// 滚动到第index个Item
 /// @param index 实际Index
 - (void)scrollToItemIndexOf:(NSUInteger)index {
     NSUInteger currentIndex = index % self.dataSourceCount;
-    if (self.delegate && [self.delegate respondsToSelector:@selector(cycleView:didScrolledToIndex:)]) {
-        [self.delegate cycleView:self didScrolledToIndex:currentIndex];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(slidesBannerView:didScrolledToIndex:)]) {
+        [self.delegate slidesBannerView:self didScrolledToIndex:currentIndex];
     }
     [self.indicatorView changeIndicatorViewCurrentIndexTo:currentIndex+1];
     [self layoutIndicatorView];
@@ -199,10 +207,16 @@ static NSString * const kLHSlidesBannerViewItemReuseIdentifier = @"LHSlidesBanne
 
 - (void)clickItemIndexOf:(NSUInteger)index {
     NSUInteger currentIdex = index % self.dataSourceCount;
-    if (self.delegate && [self.delegate respondsToSelector:@selector(cycleView:didClickedItemAtIndex:)]) {
-        [self.delegate cycleView:self didClickedItemAtIndex:(NSUInteger)currentIdex];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(slidesBannerView:didClickedItemAtIndex:)]) {
+        [self.delegate slidesBannerView:self didClickedItemAtIndex:(NSUInteger)currentIdex];
         [self scrollToItemIndexOf:currentIdex];
     }
+}
+
+#pragma mark - Action
+- (void)scrollToNextPape {
+    NSUInteger nextIndex =  self.collectionView.contentOffset.x / CGRectGetWidth(self.bounds) + 1;
+    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:nextIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
 }
 
 #pragma mark - CollectionView
@@ -231,10 +245,10 @@ static NSString * const kLHSlidesBannerViewItemReuseIdentifier = @"LHSlidesBanne
     NSUInteger currentIdex = indexPath.row % self.dataSourceCount;
     if (currentIdex < self.dataSourceCount) {
         NSUInteger currentIdex = indexPath.row % self.dataSourceCount;
-        id data = [[self.dataSource cycleRollViewRollingItems] objectAtIndex:currentIdex];
+        id data = [[self.dataSource itemsInSlidesBannerView: self] objectAtIndex:currentIdex];
         LHSlidesBannerItemView *collectionViewItem = (LHSlidesBannerItemView *)cell;
-        if (self.delegate && [self.delegate respondsToSelector:@selector(itemImageContentMode)]) {
-            [self updateItem:collectionViewItem itemData:data placeHodlerImage:nil contentMode:[self.delegate itemImageContentMode]];
+        if (self.delegate && [self.delegate respondsToSelector:@selector(itemImageContentModeInSlidesBannerView:)]) {
+            [self updateItem:collectionViewItem itemData:data placeHodlerImage:nil contentMode:[self.delegate itemImageContentModeInSlidesBannerView: self]];
         } else {
             // 默认:UIViewContentModeScaleAspectFill
             [self updateItem:collectionViewItem itemData:data placeHodlerImage:nil contentMode:UIViewContentModeScaleAspectFill];

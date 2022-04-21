@@ -24,10 +24,10 @@ typedef NS_ENUM(NSUInteger, LHSlidesBannerViewIndicatorPosition) {
 
 @protocol LHSlidesBannerViewDataSource <NSObject>
 @required
--(NSArray* _Nonnull)cycleRollViewRollingItems; /**< 轮播图片Urls */
+- (NSArray* _Nonnull)itemsInSlidesBannerView:(UIView *)slidesBannerView; /**< 轮播图片Urls */
 @optional
 /// 使用本地图片的资源Bundle, 默认为NSMainBundle
--(NSBundle *)resourcesBundle;
+- (NSBundle *)resourcesBundle;
 @end
 
 
@@ -35,16 +35,20 @@ typedef NS_ENUM(NSUInteger, LHSlidesBannerViewIndicatorPosition) {
 
 @optional
 /// 默认不支持无限循环轮播 YES:支持 NO:不支持
--(BOOL)supportInfiniteLoop;
+- (BOOL)supportInfiniteLoopInSlidesBannerView:(UIView *)slidesBannerView;
+/// 默认支持自动滚动
+- (BOOL)supportAutoScrollInSlidesBannerView:(UIView *)slidesBannerView;
+// 默认为2秒
+- (CGFloat)autoScrollTimeIntervalInSlidesBannerView:(UIView *)slidesBannerView;
 
 /// 默认是按比例拉伸(UIViewContentModeScaleAspectFill),多余部分截掉
--(UIViewContentMode)itemImageContentMode;
+- (UIViewContentMode)itemImageContentModeInSlidesBannerView:(UIView *)slidesBannerView;
 
 //MARK:滑动事件相关
 /// 点击事件回调
--(void)cycleView:(LHSlidesBannerView *)cycleView didClickedItemAtIndex:(NSUInteger)index;
+- (void)slidesBannerView:(LHSlidesBannerView *)slidesBannerView didClickedItemAtIndex:(NSUInteger)index;
 /// 滑动事件回调
--(void)cycleView:(LHSlidesBannerView *)cycleView didScrolledToIndex:(NSUInteger)index;
+- (void)slidesBannerView:(LHSlidesBannerView *)slidesBannerView didScrolledToIndex:(NSUInteger)index;
 
 //MARK:PageCountIndicator相关
 /// 是否展示指示器 默认展示
@@ -61,7 +65,7 @@ typedef NS_ENUM(NSUInteger, LHSlidesBannerViewIndicatorPosition) {
 @property (nonatomic, weak) id<LHSlidesBannerViewDataSource> dataSource;
 @property (nonatomic, weak) id<LHSlidesBannerViewDelegate> delegate;
 // 重新加载
--(void)reloadData;
+- (void)reloadData;
 @end
 
 NS_ASSUME_NONNULL_END
