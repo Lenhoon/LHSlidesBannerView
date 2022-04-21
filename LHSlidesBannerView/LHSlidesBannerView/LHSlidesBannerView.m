@@ -2,7 +2,7 @@
 //  LHSlidesBannerView.m
 //  LHSlidesBannerView
 //
-//  Created by 张令浩 on 2022/3/18.
+//  Created by LH on 2022/3/18.
 //
 
 #import "LHSlidesBannerView.h"

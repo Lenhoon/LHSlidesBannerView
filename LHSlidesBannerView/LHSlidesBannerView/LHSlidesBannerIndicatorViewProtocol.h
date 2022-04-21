@@ -2,7 +2,7 @@
 //  LHSlidesBannerIndicatorViewProtocol.h
 //  LHSlidesBannerView
 //
-//  Created by 张令浩 on 2022/3/21.
+//  Created by LH on 2022/3/21.
 //
 
 #import <Foundation/Foundation.h>
